@@ -1,7 +1,1 @@
-sdfdsfsd 
-7777777
-787878
-xiugaibugssssssdsadas
-ggggghhhhfsdfsdfsdf
-sdfsdfsdf
-这是今天新增gitsdfsdf
+﻿"deploy-uat-ztb":"npm run build-app && scp -r ./dist/* mobilebk@197.3.183.2:~/static/uat/mobile-bank-ztb/ && scp -r public/.htaccess mobilebk@197.3.183.2:~/static/uat/mobile-bank-ztb/ && scp -r ./dist/* mobilebk@197.3.183.3:~/static/uat/mobile-bank-ztb/ && scp -r public/.htaccess mobilebk@197.3.183.3:~/static/uat/mobile-bank-ztb/"
