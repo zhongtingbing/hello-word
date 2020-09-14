@@ -1,0 +1,90 @@
+@import '~antd/es/style/themes/default.less';
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.colorWeak {
+  filter: invert(80%);
+}
+
+.ant-layout {
+  min-height: 100vh;
+}
+
+canvas {
+  display: block;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+@media (max-width: @screen-xs) {
+  .ant-table {
+    width: 100%;
+    overflow-x: auto;
+    &-thead > tr,
+    &-tbody > tr {
+      > th,
+      > td {
+        white-space: pre;
+        > span {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+// 兼容IE11
+@media screen and(-ms-high-contrast: active), (-ms-high-contrast: none) {
+  body .ant-design-pro > .ant-layout {
+    min-height: 100vh;
+  }
+}
+
+.ant-page-header-heading-title {
+  display: none;
+}
+
+.ant-page-header {
+  padding: 2px 2px 2px 10px;
+}
+.ant-layout {
+  .ant-layout-sider-collapsed {
+    width: 80px !important;
+    max-width: 80px !important;
+    min-width: 80px !important;
+  }
+}
+.ant-layout-sider-dark {
+  width: 200px !important;
+  max-width: 200px !important;
+  min-width: 200px !important;
+}
+
+.ant-table-content {
+  background-color: #fff;
+}
+.ant-pro-page-header-wrap-children-content {
+  margin: 12px;
+}
+
+.ant-page-header {
+  padding: 5px 16px !important;
+}
+
+.ant-pro-page-header-wrap-children-content {
+  max-height: calc(100vh - 100px);
+  overflow-y: scroll;
+}
