@@ -20,10 +20,10 @@ export function _onCreate() {
     app.use(plugin);
   });
   
-  app.model({ namespace: 'global', ...(require('/Users/zhongtingbing/Desktop/my-app/src/models/global.ts').default) });
-app.model({ namespace: 'login', ...(require('/Users/zhongtingbing/Desktop/my-app/src/models/login.ts').default) });
-app.model({ namespace: 'setting', ...(require('/Users/zhongtingbing/Desktop/my-app/src/models/setting.ts').default) });
-app.model({ namespace: 'user', ...(require('/Users/zhongtingbing/Desktop/my-app/src/models/user.ts').default) });
+  app.model({ namespace: 'global', ...(require('/Users/zhongtingbing/Desktop/hello-word/src/models/global.ts').default) });
+app.model({ namespace: 'login', ...(require('/Users/zhongtingbing/Desktop/hello-word/src/models/login.ts').default) });
+app.model({ namespace: 'setting', ...(require('/Users/zhongtingbing/Desktop/hello-word/src/models/setting.ts').default) });
+app.model({ namespace: 'user', ...(require('/Users/zhongtingbing/Desktop/hello-word/src/models/user.ts').default) });
   return app;
 }
 
