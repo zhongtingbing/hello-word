@@ -8,7 +8,7 @@ import {
 import dynamic from 'umi/dynamic';
 import renderRoutes from 'umi/lib/renderRoutes';
 import history from '@@/history';
-import RendererWrapper0 from '/Users/zhongtingbing/Desktop/my-app/src/pages/.umi/LocaleWrapper.jsx';
+import RendererWrapper0 from '/Users/zhongtingbing/Desktop/hello-word/src/pages/.umi/LocaleWrapper.jsx';
 import { routerRedux, dynamic as _dvaDynamic } from 'dva';
 
 const Router = routerRedux.ConnectedRouter;
@@ -20,7 +20,7 @@ const routes = [
       ? _dvaDynamic({
           component: () =>
             import(/* webpackChunkName: "layouts__UserLayout" */ '../../layouts/UserLayout'),
-          LoadingComponent: require('/Users/zhongtingbing/Desktop/my-app/src/components/PageLoading/index')
+          LoadingComponent: require('/Users/zhongtingbing/Desktop/hello-word/src/components/PageLoading/index')
             .default,
         })
       : require('../../layouts/UserLayout').default,
@@ -32,7 +32,7 @@ const routes = [
           ? _dvaDynamic({
               component: () =>
                 import(/* webpackChunkName: "p__user__login" */ '../user/login'),
-              LoadingComponent: require('/Users/zhongtingbing/Desktop/my-app/src/components/PageLoading/index')
+              LoadingComponent: require('/Users/zhongtingbing/Desktop/hello-word/src/components/PageLoading/index')
                 .default,
             })
           : require('../user/login').default,
@@ -41,7 +41,7 @@ const routes = [
       {
         component: () =>
           React.createElement(
-            require('/Users/zhongtingbing/Desktop/my-app/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
+            require('/Users/zhongtingbing/Desktop/hello-word/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
               .default,
             { pagesPath: 'src/pages', hasRoutesInConfig: true },
           ),
@@ -54,7 +54,7 @@ const routes = [
       ? _dvaDynamic({
           component: () =>
             import(/* webpackChunkName: "layouts__SecurityLayout" */ '../../layouts/SecurityLayout'),
-          LoadingComponent: require('/Users/zhongtingbing/Desktop/my-app/src/components/PageLoading/index')
+          LoadingComponent: require('/Users/zhongtingbing/Desktop/hello-word/src/components/PageLoading/index')
             .default,
         })
       : require('../../layouts/SecurityLayout').default,
@@ -65,7 +65,7 @@ const routes = [
           ? _dvaDynamic({
               component: () =>
                 import(/* webpackChunkName: "layouts__BasicLayout" */ '../../layouts/BasicLayout'),
-              LoadingComponent: require('/Users/zhongtingbing/Desktop/my-app/src/components/PageLoading/index')
+              LoadingComponent: require('/Users/zhongtingbing/Desktop/hello-word/src/components/PageLoading/index')
                 .default,
             })
           : require('../../layouts/BasicLayout').default,
@@ -84,7 +84,7 @@ const routes = [
               ? _dvaDynamic({
                   component: () =>
                     import(/* webpackChunkName: "p__Welcome" */ '../Welcome'),
-                  LoadingComponent: require('/Users/zhongtingbing/Desktop/my-app/src/components/PageLoading/index')
+                  LoadingComponent: require('/Users/zhongtingbing/Desktop/hello-word/src/components/PageLoading/index')
                     .default,
                 })
               : require('../Welcome').default,
@@ -103,7 +103,7 @@ const routes = [
                   ? _dvaDynamic({
                       component: () =>
                         import(/* webpackChunkName: "layouts__BasicLayout" */ '../tadiaoManage'),
-                      LoadingComponent: require('/Users/zhongtingbing/Desktop/my-app/src/components/PageLoading/index')
+                      LoadingComponent: require('/Users/zhongtingbing/Desktop/hello-word/src/components/PageLoading/index')
                         .default,
                     })
                   : require('../tadiaoManage').default,
@@ -117,7 +117,7 @@ const routes = [
                   ? _dvaDynamic({
                       component: () =>
                         import(/* webpackChunkName: "layouts__BasicLayout" */ '../tadiaoManage/edit'),
-                      LoadingComponent: require('/Users/zhongtingbing/Desktop/my-app/src/components/PageLoading/index')
+                      LoadingComponent: require('/Users/zhongtingbing/Desktop/hello-word/src/components/PageLoading/index')
                         .default,
                     })
                   : require('../tadiaoManage/edit').default,
@@ -126,7 +126,7 @@ const routes = [
               {
                 component: () =>
                   React.createElement(
-                    require('/Users/zhongtingbing/Desktop/my-app/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
+                    require('/Users/zhongtingbing/Desktop/hello-word/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
                       .default,
                     { pagesPath: 'src/pages', hasRoutesInConfig: true },
                   ),
@@ -141,7 +141,7 @@ const routes = [
               ? _dvaDynamic({
                   component: () =>
                     import(/* webpackChunkName: "p__Admin" */ '../Admin'),
-                  LoadingComponent: require('/Users/zhongtingbing/Desktop/my-app/src/components/PageLoading/index')
+                  LoadingComponent: require('/Users/zhongtingbing/Desktop/hello-word/src/components/PageLoading/index')
                     .default,
                 })
               : require('../Admin').default,
@@ -155,7 +155,7 @@ const routes = [
                   ? _dvaDynamic({
                       component: () =>
                         import(/* webpackChunkName: "p__Admin" */ '../Welcome'),
-                      LoadingComponent: require('/Users/zhongtingbing/Desktop/my-app/src/components/PageLoading/index')
+                      LoadingComponent: require('/Users/zhongtingbing/Desktop/hello-word/src/components/PageLoading/index')
                         .default,
                     })
                   : require('../Welcome').default,
@@ -165,7 +165,7 @@ const routes = [
               {
                 component: () =>
                   React.createElement(
-                    require('/Users/zhongtingbing/Desktop/my-app/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
+                    require('/Users/zhongtingbing/Desktop/hello-word/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
                       .default,
                     { pagesPath: 'src/pages', hasRoutesInConfig: true },
                   ),
@@ -177,7 +177,7 @@ const routes = [
               ? _dvaDynamic({
                   component: () =>
                     import(/* webpackChunkName: "p__404" */ '../404'),
-                  LoadingComponent: require('/Users/zhongtingbing/Desktop/my-app/src/components/PageLoading/index')
+                  LoadingComponent: require('/Users/zhongtingbing/Desktop/hello-word/src/components/PageLoading/index')
                     .default,
                 })
               : require('../404').default,
@@ -186,7 +186,7 @@ const routes = [
           {
             component: () =>
               React.createElement(
-                require('/Users/zhongtingbing/Desktop/my-app/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
+                require('/Users/zhongtingbing/Desktop/hello-word/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
                   .default,
                 { pagesPath: 'src/pages', hasRoutesInConfig: true },
               ),
@@ -198,7 +198,7 @@ const routes = [
           ? _dvaDynamic({
               component: () =>
                 import(/* webpackChunkName: "p__404" */ '../404'),
-              LoadingComponent: require('/Users/zhongtingbing/Desktop/my-app/src/components/PageLoading/index')
+              LoadingComponent: require('/Users/zhongtingbing/Desktop/hello-word/src/components/PageLoading/index')
                 .default,
             })
           : require('../404').default,
@@ -207,7 +207,7 @@ const routes = [
       {
         component: () =>
           React.createElement(
-            require('/Users/zhongtingbing/Desktop/my-app/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
+            require('/Users/zhongtingbing/Desktop/hello-word/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
               .default,
             { pagesPath: 'src/pages', hasRoutesInConfig: true },
           ),
@@ -218,7 +218,7 @@ const routes = [
     component: __IS_BROWSER
       ? _dvaDynamic({
           component: () => import(/* webpackChunkName: "p__404" */ '../404'),
-          LoadingComponent: require('/Users/zhongtingbing/Desktop/my-app/src/components/PageLoading/index')
+          LoadingComponent: require('/Users/zhongtingbing/Desktop/hello-word/src/components/PageLoading/index')
             .default,
         })
       : require('../404').default,
@@ -227,7 +227,7 @@ const routes = [
   {
     component: () =>
       React.createElement(
-        require('/Users/zhongtingbing/Desktop/my-app/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
+        require('/Users/zhongtingbing/Desktop/hello-word/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
           .default,
         { pagesPath: 'src/pages', hasRoutesInConfig: true },
       ),
