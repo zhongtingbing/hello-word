@@ -1,9 +1,8 @@
 import React from 'react';
 import { PageHeaderWrapper } from '@ant-design/pro-layout';
 import { FormattedMessage } from 'umi-plugin-react/locale';
-import { Card, Typography, Input } from 'antd';
-import { Table, Column, Cell } from 'fixed-data-table-2';
-import 'fixed-data-table-2/dist/fixed-data-table.css';
+import { Table, Input } from 'antd';
+import { VTComponents } from 'virtualizedtableforantd';
 
 import styles from './Welcome.less';
 
@@ -15,36 +14,58 @@ const MyCustomCell = ({ mySpecialProp }) => (
 );
 export default class Index extends React.PureComponent {
   state = {
-    rows: new Array(100).fill('1'),
+    rows: [],
   };
+  componentDidMount() {
+    const a = [];
+    for (let i = 0; i < 1000; i++) {
+      a.push({
+        name: 'ww',
+        id: i + 'iii',
+      });
+    }
+    this.setState({
+      rows: a,
+    });
+  }
 
-  onChange = (value: any, index: any) => {};
-
+  onChange = (value: any, index: number) => {
+    const rows = [...this.state.rows];
+    rows[index]['name'] = value;
+    this.setState({ rows });
+  };
+  columns = [
+    { title: '序号', dataIndex: 'index', width: 50 },
+    {
+      title: '名称',
+      dataIndex: 'name',
+      width: 50,
+      render: (value: any, record: any, index: number) => (
+        <Input
+          style={{ width: '200px' }}
+          value={value}
+          onChange={e => {
+            this.onChange(e.target.value, index);
+          }}
+        />
+      ),
+    },
+  ];
   render() {
-    console.log(this.state.rows, 'rows');
     const { rows } = this.state;
     return (
       <PageHeaderWrapper>
-        <Table rowHeight={50} rowsCount={rows.length} width={5000} height={5000} headerHeight={50}>
-          <Column
-            header={<Cell>Col 1</Cell>}
-            cell={<Cell>Column 1 static content</Cell>}
-            width={2000}
-          />
-          <Column
-            header={<Cell>Col 2</Cell>}
-            cell={<MyCustomCell mySpecialProp="column2" />}
-            width={1000}
-          />
-          <Column
-            header={<Cell>Col 3</Cell>}
-            cell={({ rowIndex, ...props }) => (
-              <Cell {...props}>Data for column 3: {rows[rowIndex]}</Cell>
-            )}
-            width={2000}
-          />
-        </Table>
-        ,
+        <Table
+          className="templateTable"
+          dataSource={rows} //dataSource 是table的数据
+          // bordered
+          columns={this.columns}
+          pagination={false}
+          rowKey={record => record.id}
+          scroll={{ y: 500 }} //y: 500 it's important!!!
+          /*the id is immutable   the height prop is variable */
+          components={VTComponents({ id: 1000 })} // 这是最核心的代码
+        />
       </PageHeaderWrapper>
     );
   }

@@ -1,0 +1,60 @@
+import React from 'react';
+import { PageHeaderWrapper } from '@ant-design/pro-layout';
+import { FormattedMessage } from 'umi-plugin-react/locale';
+import { Card, Typography, Input } from 'antd';
+import { Table, Column, Cell } from 'fixed-data-table-2';
+import 'fixed-data-table-2/dist/fixed-data-table.css';
+
+import styles from './Welcome.less';
+
+//acebookarchive/fixed-data-table
+
+// react-lazyload
+const MyCustomCell = ({ mySpecialProp }) => (
+  <Cell>{mySpecialProp === 'column2' ? "I'm column 2" : "I'm not column 2"}</Cell>
+);
+export default class Index extends React.PureComponent {
+  state = {
+    rows: new Array(10000).fill('1'),
+  };
+
+  onChange = (value: any, index: any) => {
+    const rows = [...this.state.rows];
+    rows[index] = value;
+    this.setState({ rows });
+  };
+  render() {
+    const { rows } = this.state;
+    return (
+      <PageHeaderWrapper>
+        <Table rowHeight={50} rowsCount={rows.length} width={700} height={600} headerHeight={50}>
+          <Column
+            header={<Cell>index</Cell>}
+            cell={({ rowIndex, ...props }) => <Cell {...props}>{rowIndex + 1}</Cell>}
+            width={200}
+          />
+          <Column
+            header={<Cell>Col 1</Cell>}
+            cell={({ rowIndex, ...props }) => (
+              <Cell {...props}>
+                <Input
+                  value={rows[rowIndex]}
+                  onChange={e => {
+                    this.onChange(e.target.value, rowIndex);
+                  }}
+                />
+              </Cell>
+            )}
+            width={200}
+          />
+          <Column
+            header={<Cell>Col 2</Cell>}
+            cell={<MyCustomCell mySpecialProp="column2" />}
+            width={200}
+          />
+        </Table>
+        ,
+      </PageHeaderWrapper>
+    );
+  }
+}
